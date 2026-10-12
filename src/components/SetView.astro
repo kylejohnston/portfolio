@@ -21,7 +21,7 @@ const picked = set.projects.map(({ id, why }) => {
 
 <HeroPanels>
   <div class="hero-v2-intro text-ink">
-    <div class="text-xl text-pretty"><strong>{heading}</strong> {set.intro}</div>
+    <div class="text-4xl text-pretty"><strong set:html={set.heading} /> <Fragment set:html={set.intro} /></div>
     <svg class="intro-signature" viewBox="0 0 140 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path class="intro-signature__path" pathLength="1" d="M10.7872 2.00049L2.01163 35.1684C2.00872 35.1794 2.00727 35.1848 2.00631 35.1907C2.00536 35.1965 2.00498 35.202 2.00422 35.2131C1.93927 36.1667 2.63363 35.5312 3.37401 33.9563C5.22113 30.0273 13.9456 17.179 18.423 17.179C22.9004 17.179 16.5574 29.5153 18.423 29.5153C20.6617 29.5153 25.7609 20.6332 27.3778 20.6332C29.632 20.6332 23.0207 31.1105 19.5278 37.0733C19.3347 37.4028 19.2382 37.5675 19.3064 37.635C19.3745 37.7024 19.5397 37.6037 19.87 37.4064C28.078 32.5023 45.1196 23.5939 53.869 23.5939C64.4542 23.5939 55.9066 35.5415 49.8685 43.3811C49.0814 44.4029 48.6878 44.914 48.7616 44.9907C48.8354 45.0673 49.3632 44.6932 50.4188 43.9449C56.9279 39.3307 76.6056 28.1248 115.865 26.5546C141.216 25.5406 142.978 33.2161 130.292 34.6965" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
@@ -47,22 +47,8 @@ const picked = set.projects.map(({ id, why }) => {
 
 <style>
   #work {
-    /* margin-top: -80px; */
-    /* padding-top: 80px; */
     position: relative;
     z-index: 1;
-    /* background-color: var(--color-paper); */
-    /* clip-path: polygon(0 80px, 100% 0, 100% 100%, 0 100%); */
-  }
-  #work::before {
-    /* content: "";
-    position: absolute;
-    z-index: -1;
-    inset: 1; */
-    /* margin-top: -80px; */
-    /* padding-top: 80px; */
-    /* background-color: var(--color-paper); */
-    /* clip-path: polygon(0 80px, 100% 0, 100% 100%, 0 100%); */
   }
   /* Matches .nav-pill's look (Nav.astro) — same white pill, radius, shadow,
      ink color, and 20px icon — but always shows its label; it's a
@@ -106,6 +92,8 @@ const picked = set.projects.map(({ id, why }) => {
     font-size: var(--text-sm);
   }
 
+  .hero-v2-intro { max-width: 50ch; margin-left: auto; margin-right: auto; }
+
   /* stroke="currentColor" — inherits .hero-v2-intro's text-ink instead of
      hardcoding it a second time here. */
   .intro-signature {
@@ -113,6 +101,7 @@ const picked = set.projects.map(({ id, why }) => {
     width: 144px;
     height: auto;
     margin-left: auto;
+    transform: translateX(24px) translateY(-16px);
   }
 
   /* pathLength="1" on the path (see markup) rescales the SVG's internal
@@ -150,7 +139,7 @@ const picked = set.projects.map(({ id, why }) => {
      .hero-v2-intro only needs its own column placement and spacing, since
      it's slotted content inside that component's grid. */
   .hero-v2-intro {
-    grid-column: 3 / 10;
+    grid-column: 4 / 10;
     padding-inline: 48px;
     padding-block: 64px;
     font-family: var(--font-style);
@@ -166,11 +155,12 @@ const picked = set.projects.map(({ id, why }) => {
       padding-block: 16px 12px;
     }
       .intro-signature {
-      display: block;
-      width: 144px;
-      height: auto;
-      margin-top: 4px;
-      margin-left: auto;
+        display: block;
+        width: 144px;
+        height: auto;
+        margin-top: 4px;
+        margin-left: auto;
+        transform: translateX(0) translateY(6px);
     }
   }
 </style>
