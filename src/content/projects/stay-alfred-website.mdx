@@ -1,0 +1,40 @@
+---
+title: "StayAlfred.com Design & Development"
+client: "Senior Designer @ Stay Alfred"
+summary: "Redesigned the partner and company pages on StayAlfred.com, built in React and TypeScript on a headless CMS."
+cover: ../../assets/projects/stay-alfred/thumb-website.webp
+coverAlt: "StayAlfred.com website pages"
+overlayColor: "#C3C225"
+---
+import { globImages } from '../../lib/globImages';
+export const pics = globImages(
+  import.meta.glob('../../assets/projects/stay-alfred/*.webp', { eager: true })
+);
+
+**My role:** Design, Frontend Development with React & TypeScript
+
+## Partner Page Redesign
+
+The primary goal of this project was to drive interest in Stay Alfred's partnership program, measured in leads generated through the HubSpot-based contact form. Improvements included an updated content hierarchy, more prominent contact CTAs, a dedicated contact page, and a dedicated resources page featuring case studies, webinars, and other lead-generating content.
+
+**Built with:** Kentico (Headless CMS), React, TypeScript
+
+<Span08 scroll src={pics["partner-v2"]} alt="Partner page" />
+
+<Spacer />
+
+### Resources
+
+<Span10 scroll src={pics["partner-resources"]} alt="Partner resources page" />
+
+<Spacer />
+
+## Company Page Redesign
+
+The goal of this redesign was to create a visually compelling, easily maintainable page. Prior to the redesign, the page content was hard-coded, making edits nearly impossible. Now, the page is easy to update via a headless CMS. The redesign also included accessibility improvements and better integration of key company information.
+
+**Built with:** Kentico (Headless CMS), React, TypeScript
+
+<Span08 scroll src={pics["company-v2"]} alt="Company page" />
+
+<Spacer />

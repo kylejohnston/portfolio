@@ -1,0 +1,59 @@
+---
+title: "Stay Alfred Marketing Promotions"
+client: "Senior Designer @ Stay Alfred"
+summary: "Landing pages, emails, social videos, and event collateral for Stay Alfred's openings and events."
+cover: ../../assets/projects/stay-alfred/thumb-marketing.webp
+coverAlt: "Stay Alfred marketing promotions"
+overlayColor: "#C3C225"
+---
+import { globImages } from '../../lib/globImages';
+import loyalty from '../../assets/projects/stay-alfred/social-loyalty--sm.mp4';
+import suitcase from '../../assets/projects/stay-alfred/social-suitcase--sm.mp4';
+import hotels from '../../assets/projects/stay-alfred/social-hotels--sm.mp4';
+export const pics = globImages(
+  import.meta.glob('../../assets/projects/stay-alfred/*.webp', { eager: true })
+);
+
+**My role:** Art Direction & Design
+
+## The Man in the Green Suit
+
+For the grand opening of Stay Alfred's newest property in Miami, we created a number of interactive contests and events, including a scavenger hunt for the Man in the Green Suit. To help promote the event, I created a responsive landing page that included event details and prize information.
+
+**Built with:** HTML, CSS, HubSpot
+
+### Event landing page, desktop and mobile
+
+<Scroller
+  desktop={{ src: pics["greensuit"], alt: "Man in the Green Suit, desktop landing page" }}
+  mobile={{ src: pics["greensuit-mobile"], alt: "Man in the Green Suit, mobile landing page" }}
+/>
+
+<Spacer />
+
+## Social Promotions
+
+Animated videos created to promote [Stay Alfred's loyalty program](/work/stay-alfred-brand) and various giveaways. The videos were used for paid and organic posts on Facebook, Instagram, and other social channels.
+
+<Videos
+  items={[
+    { src: loyalty, poster: pics["social-loyalty-still"], title: "Loyalty Program Promotion" },
+    { src: suitcase, poster: pics["social-suitcase-still"], title: "Green Suitcase Giveaway" },
+    { src: hotels, poster: pics["social-hotels-still"], title: "Break Up with Hotels Promotion" },
+  ]}
+/>
+
+<Spacer />
+
+## Brandon Ratcliff Event
+
+During the Country Music Awards in Nashville, Stay Alfred hosted a private, rooftop concert featuring Brandon Ratcliff. In the weeks leading up to the event, guests were invited via email and asked to RSVP via a dedicated landing page. I designed the HubSpot-based emails and RSVP page, event signage, VIP badges, and more.
+
+<Thirds
+  first={{ src: pics["505-email"], alt: "Event invitation email template" }}
+  second={{ src: pics["505-landing-page"], alt: "HubSpot RSVP page" }}
+  third={{ src: pics["505-vip-badge-4x"], alt: "VIP badge" }}
+/>
+<Caption>Email template, HubSpot RSVP page, and VIP badge</Caption>
+
+<Spacer />
