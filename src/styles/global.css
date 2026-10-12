@@ -23,6 +23,7 @@
   --text-3xl:  2rem;
   --text-3xl--lh: 1.2;
   --text-4xl:  2.125rem;
+  --text-4xl--lh: 1.2;
   --text-5xl:  3rem;
   --text-5xl--lh: 1;
   --text-6xl:  3.5rem;
@@ -661,6 +662,63 @@ body.overlay-open {
     calc(var(--dot-size) / 2) calc(var(--dot-size) / 2);
 }
 
+/* ============================================================
+   Inline glyphs — SVGs embedded in sets.ts heading/intro
+   strings and rendered with set:html (SetView.astro). em units
+   keep them in step with the surrounding text size. Add
+   per-glyph rules below as .glyph--<name>.
+   ============================================================ */
+
+.glyph--hi {
+  transform: translateX(2px) translateY(-14px) rotate(-5deg);
+  display: inline-block;
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+  margin-block: -1em;
+  fill: var(--color-ink);
+  margin-left: -59px;
+}
+.glyph--backspace {
+  transform: rotate(0deg) translateX(-15px) translateY(-1px);
+  display: inline-block;
+  height: 33px;
+  width: auto;
+  vertical-align: middle;
+  margin-block: -1em;
+  fill: var(--color-ink);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .intro-period {
+    animation: delete-period 1ms calc(var(--reveal-onload-total, 350ms) + 0.8s + 305ms) forwards;
+  }
+}
+@keyframes delete-period {
+  to { opacity: 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .glyph--backspace {
+    animation: press-key 180ms ease-out calc(var(--reveal-onload-total, 350ms) + 0.8s + 300ms);
+  }
+}
+@keyframes press-key {
+  40% { scale: 0.86; }
+}
+
+
+
+  
+  @keyframes wave-animation {
+    0%   { transform: rotate(00.0deg) }
+    14%  { transform: rotate(00.0deg) }
+    20%  { transform: rotate(-16.0deg)}
+    30%  { transform: rotate(14.0deg) }
+    40%  { transform: rotate(-8.0deg) }
+    50%  { transform: rotate(12.0deg) }
+    60%  { transform: rotate(-8.0deg) }
+    70%  { transform: rotate(00.0deg) }
+    100% { transform: rotate(00.0deg) }
+  }
 /* =================================
    R E S P O N S I V E · S T Y L E S
    ================================= */
@@ -678,6 +736,7 @@ body.overlay-open {
     --overlay-content-pad: 16px;
     --text-xl:  1.375rem;
     --text-3xl: 1.625rem;
+    --text-4xl: 1.625rem;
     --text-5xl: 1.875rem;
   }
 
@@ -743,4 +802,26 @@ body.overlay-open {
     transition-duration: 120ms;
     transition-delay: 0ms;
   }
+}
+@media (max-width: 640px) {
+  .glyph--hi {
+    transform: translateX(0) translateY(-12px) rotate(-5deg);
+    display: inline-block;
+    height: 32px;
+    width: auto;
+    vertical-align: middle;
+    fill: var(--color-ink);
+    margin-block: -1em;
+    margin-left: -8px;
+  }
+  .glyph--backspace {
+    transform: rotate(0deg) translateX(-12px) translateY(-1px);
+    display: inline-block;
+    height: 24px;
+    width: auto;
+    vertical-align: middle;
+    margin-block: -1em;
+    fill: var(--color-ink);
+  }
+
 }
