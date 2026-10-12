@@ -17,11 +17,11 @@ export const workGroups: WorkGroup[] = [
     ids: ['flow14-qwally', 'flow14-mental-health', 'flow14-medtronic-ux-ia', 'flow14-vmc-group'],
   },
   {
-    label: 'Garmin',
-    ids: ['garmin-connect', 'garmin-mobile-web'],
+    label: 'Stay Alfred',
+    ids: ['stay-alfred-website', 'stay-alfred-marketing'],
   },
   {
-    label: 'Stay Alfred',
-    ids: ['stay-alfred-brand', 'stay-alfred-marketing', 'stay-alfred-website'],
+    label: 'Garmin',
+    ids: ['garmin-connect', 'garmin-mobile-web'],
   },
 ];
