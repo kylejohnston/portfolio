@@ -20,4 +20,8 @@ export const workGroups: WorkGroup[] = [
     label: 'Garmin',
     ids: ['garmin-connect', 'garmin-mobile-web'],
   },
+  {
+    label: 'Stay Alfred',
+    ids: ['stay-alfred-brand', 'stay-alfred-marketing', 'stay-alfred-website'],
+  },
 ];
