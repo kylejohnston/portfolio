@@ -1,30 +1,65 @@
 ---
-title: "Grocery Buddy Product Design"
-client: "Grocery Buddy"
-summary: "Rebuilt a high-traffic marketplace homepage around intent-based navigation, cutting time-to-first-listing-view by 40% without touching backend search."
-cover: ../../assets/projects/flow14-grocery-buddy/cover.svg
-coverAlt: "Homepage layout split into three intent-based entry zones"
+title: "Grocery Buddy Concept Design & Branding"
+client: "Concept and Design @ flow14"
+summary: "I designed the concept and brand for Grocery Buddy, an app that helps shoppers compare prices at their favorite stores."
+cover: ../../assets/projects/flow14-grocery-buddy/flow14-grocery-buddy.webp
+coverAlt: "Grocery Buddy app sign-up screen with the app's mascot above the Grocery Buddy name"
 overlayColor: "#99F"
 ---
-import { Image } from 'astro:assets';
 import { globImages } from '../../lib/globImages';
 export const pics = globImages(
-  import.meta.glob('../../assets/projects/flow14-grocery-buddy/*.svg', { eager: true })
+  import.meta.glob('../../assets/projects/flow14-grocery-buddy/*.jpg', { eager: true })
 );
 
+The Grocery Buddy app is the best way to compare prices on products at your favorite stores. With real-time prices contributed by nearby shoppers and a smart shopping list with deal alerts, Grocery Buddy shoppers know they're getting the best price on everything they buy.
 
-The marketplace homepage had one job for two very different visitors: browsers who wanted to be surprised, and searchers who already knew what they were looking for. It served both with the same three rows of trending listings, and session recordings showed the mismatch immediately — casual visitors scrolled once and bounced, while returning buyers repeated the same search from the homepage every time because there was no faster path back to it.
+**My role:** Concept & Design
 
-<Span12 src={pics["full-bleed"]} alt="Redesigned homepage showing three intent-based entry zones above the fold" />
+<Spacer />
 
-Card sorts and a round of contextual interviews split visitor intent into three groups: browsing with no target in mind, replacing something specific, and comparing a shortlist before buying. That mapped cleanly onto three homepage zones — a discovery feed, a jump-back-in strip keyed to recent searches, and a comparison shelf for saved listings — replacing the single generic feed with three that a visitor could self-select into within the first screen.
+## The Problem
 
-<SideBySide
-  left={{ src: pics["side-left"], alt: "Original homepage with a single trending-listings feed" }}
-  right={{ src: pics["side-right"], alt: "Redesigned homepage with discovery, jump-back-in, and comparison zones" }}
+Before Grocery Buddy, people who shopped at multiple stores were in the dark about where to find the lowest prices for the groceries they buy every day. Store websites and apps are hard to navigate and don't always show prices.
+
+## The Solution
+
+Grocery Buddy helps shoppers quickly find current prices at their favorite stores. Even better, Grocery Buddy's smart shopping list shows price changes and sales, helping shoppers easily save time and money.
+
+<Span08 src={pics["screens_960"]} alt="Grocery Buddy app screens: sign up, search results with prices at nearby stores, and shopping lists" />
+
+<Spacer />
+
+## User Flow
+
+<Span12 src={pics["user-flow_lg"]} alt="Grocery Buddy UX flow diagram from the splash screen through sign in or sign up, onboarding, and the dashboard to the scan, search, lists, and profile screens" />
+
+<Spacer />
+
+## Concept Sketches
+
+<Thirds
+  first={{ src: pics["sketches-01"], alt: "Notebook sketches of Grocery Buddy screens, including card and list views, account settings, item detail, and search results" }}
+  second={{ src: pics["sketches-02"], alt: "Notebook sketches of the mascot, then the scan, results, report price, list, splash, and sign-up screens" }}
+  third={{ src: pics["sketches-03"], alt: "Notebook sketches of alternate dashboard and item view layouts, with notes on floating action buttons and tab bar icons" }}
+  rounded border
 />
-<Caption>Before: one undifferentiated feed. After: three intent-led zones, ordered by how often each was used in testing.</Caption>
 
-The redesign shipped behind a 50/50 split test over six weeks. Time-to-first-listing-view dropped 40% in the treatment group, and the jump-back-in strip alone accounted for a third of homepage-originated searches within the first month — traffic that had previously gone through the search bar every single visit.
+<Spacer />
 
-The three-zone pattern outlived the homepage. The comparison shelf became a shared component used on category pages six months later, and the zone-based layout was the first place engineering and design agreed on a shared token set for card spacing — the seed of the design system work that followed.
+## Visual & UI Design
+
+<Span12 src={pics["screens_1920"]} alt="Grocery Buddy screen designs laid out in a grid: splash, search, search results, add to list, barcode scanner, report price, and lists" />
+
+<Spacer />
+
+## Prototyping
+
+<Span12 src={pics["prototype-wiring_1920"]} alt="Grocery Buddy screens wired together into a prototype in Figma, with connector lines showing how each screen leads to the next" />
+
+<Spacer />
+
+## Icon Design Process
+
+<Span12 src={pics["icon-dev_1920"]} alt="Six explorations of the Grocery Buddy mascot icon in different background colors, textures, and expressions" />
+
+<Spacer />
