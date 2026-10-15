@@ -22,8 +22,8 @@ export const sets: Record<string, Set> = {
       { id: 'etsy-cursor-for-pds' },
       { id: 'etsy-collections' },
       { id: 'etsy-global-nav' },
-      { id: 'flow14-mental-health' },
-      { id: 'flow14-qwally' },
+      { id: 'mental-health' },
+      { id: 'qwally' },
     ],
   },
   'babylist': {
@@ -43,7 +43,7 @@ export const sets: Record<string, Set> = {
       { id: 'etsy-homepage', why: 'personalized the funnel entry point, validated with research and live A/B testing' },
       { id: 'etsy-landings', why: 'a literal shopping funnel—discovery-to-listing conversion, built as a flexible system' },
       { id: 'etsy-collections', why: 'highest experiment velocity at Etsy—UX, ranking, and placement tuned through rapid testing' },
-      { id: 'flow14-qwally', why: 'no existing product to react to—direct partnership with city stakeholders through launch' },
+      { id: 'qwally', why: 'no existing product to react to—direct partnership with city stakeholders through launch' },
     ],
   },
   'vanta': {
@@ -53,17 +53,17 @@ export const sets: Record<string, Set> = {
       { id: 'etsy-global-nav', why: 'vision and design strategy for a whole product area — the IA connecting Etsy’s entire experience, backed by exec buy-in.' },
       { id: 'etsy-homepage', why: 'one pattern scaled across a data-rich, highly configurable system — 65,000 personalized, ranked items.' },
       { id: 'etsy-cursor-for-pds', why: "working AI-natively — onboarding that scaled AI prototyping across a design team, no trainer required." },
-      { id: 'flow14-qwally', why: 'zero-to-one for a workflow-heavy SaaS platform in a regulated space (local government) — direct partnership through launch⁠.' },
+      { id: 'qwally', why: 'zero-to-one for a workflow-heavy SaaS platform in a regulated space (local government) — direct partnership through launch⁠.' },
     ],
   },
   'eli-lilly': {
     heading: "I’m Kyle Johnston,",
     intro: "a staff product designer with a creative director’s background. I design and test consumer and marketplace experiences where craft and results carry equal weight.",
     projects: [
-      { id: 'flow14-medtronic-ux-ia' },
+      { id: 'medtronic-ux-ia' },
       { id: 'etsy-global-nav' },
       { id: 'etsy-homepage' },
-      { id: 'flow14-qwally' },
+      { id: 'qwally' },
     ],
   },
 };
