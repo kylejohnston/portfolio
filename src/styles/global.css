@@ -696,7 +696,7 @@ body.overlay-open {
 }
 @media (prefers-reduced-motion: no-preference) {
   .intro-period {
-    animation: delete-period 1ms calc(var(--reveal-onload-total, 350ms) + 0.8s + 305ms) forwards;
+    animation: delete-period 1ms calc(var(--reveal-onload-total, 350ms) + 100ms) forwards;
   }
 }
 @keyframes delete-period {
@@ -704,7 +704,7 @@ body.overlay-open {
 }
 @media (prefers-reduced-motion: no-preference) {
   .glyph--backspace {
-    animation: press-key 180ms ease-out calc(var(--reveal-onload-total, 350ms) + 0.8s + 300ms);
+    animation: press-key 180ms ease-out var(--reveal-onload-total, 350ms);
   }
 }
 @keyframes press-key {
