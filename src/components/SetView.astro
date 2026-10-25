@@ -121,12 +121,19 @@ const picked = set.projects.map(({ id, why }) => {
      Delay reads --reveal-onload-total (set by Layout.astro's classifyReveal
      script) so the signature starts once the work cards above the fold
      finish fading in, rather than racing them; 350ms covers pages with no
-     onload reveal elements to wait for. */
+     onload reveal elements to wait for.
+
+     When the intro has the delete-key glyph (global.css), the key press
+     plays first at --reveal-onload-total and the signature is the finishing
+     touch, starting 800ms after the press begins. */
   @media (prefers-reduced-motion: no-preference) {
     .intro-signature__path {
       stroke-dasharray: 1 1.02;
       stroke-dashoffset: 1;
       animation: draw-signature 0.8s ease var(--reveal-onload-total, 350ms) forwards;
+    }
+    .hero-v2-intro:global(:has(.glyph--backspace)) .intro-signature__path {
+      animation-delay: calc(var(--reveal-onload-total, 350ms) + 800ms);
     }
   }
 

@@ -279,6 +279,15 @@ body.overlay-open {
   transition-duration: 256ms;
 }
 
+/* Clicking the backdrop closes the overlay (overlay.js), so the cursor says
+   so. Fine-pointer devices only; hotspot is the 40px glyph's center, and
+   `pointer` is the fallback if the image fails to load. */
+@media (hover: hover) and (pointer: fine) {
+  .overlay-background {
+    cursor: url('/cursor-close.svg') 20 20, pointer;
+  }
+}
+
 /* Bottom sheet. Only transform, opacity and filter animate — all three are
    GPU-compositable, so no frame of this transition triggers layout. The old
    version animated `right`, which did. */
@@ -696,7 +705,7 @@ body.overlay-open {
 }
 @media (prefers-reduced-motion: no-preference) {
   .intro-period {
-    animation: delete-period 1ms calc(var(--reveal-onload-total, 350ms) + 0.8s + 305ms) forwards;
+    animation: delete-period 1ms calc(var(--reveal-onload-total, 350ms) + 100ms) forwards;
   }
 }
 @keyframes delete-period {
@@ -704,7 +713,7 @@ body.overlay-open {
 }
 @media (prefers-reduced-motion: no-preference) {
   .glyph--backspace {
-    animation: press-key 180ms ease-out calc(var(--reveal-onload-total, 350ms) + 0.8s + 300ms);
+    animation: press-key 180ms ease-out var(--reveal-onload-total, 350ms);
   }
 }
 @keyframes press-key {
