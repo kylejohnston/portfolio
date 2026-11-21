@@ -19,16 +19,17 @@ const fullTitle = title.includes('Kyle Johnston') ? title : `${title} · Kyle Jo
 const ogImage = new URL('/og-image.png', Astro.site);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-// Structured identity for crawlers and AI agents. Add the Wikidata item URL
-// to sameAs once it exists.
+// Structured identity for crawlers and AI agents.
 const person = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   '@id': new URL('/#person', Astro.site).href,
   name: 'Kyle Johnston',
   url: new URL('/', Astro.site).href,
+  image: new URL('/kyle-johnston.jpg', Astro.site).href,
   jobTitle: 'Staff Product Designer',
   sameAs: [
+    'https://www.wikidata.org/wiki/Q142237954',
     'https://www.linkedin.com/in/kylejohnston/',
     'https://github.com/kylejohnston',
     'https://codepen.io/kwjohnston/',
