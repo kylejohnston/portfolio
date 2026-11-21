@@ -1,0 +1,12 @@
+---
+// Building 404.html also stops Cloudflare Pages from treating the site as an
+// SPA, which otherwise serves the home page with a 200 for every unknown URL.
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Page not found" description="This page doesn’t exist." noindex>
+  <div class="col-span-12 sm:col-start-3 sm:col-span-6 pt-3 lg:pt-9">
+    <h1>Page not found</h1>
+    <p>There’s nothing at this address. Try the <a href="/">home page</a> or browse <a href="/work">all work</a>.</p>
+  </div>
+</Layout>
