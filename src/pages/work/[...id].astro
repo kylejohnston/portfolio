@@ -28,7 +28,7 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 ---
 
-<Layout title={entry.data.title}>
+<Layout title={entry.data.title} description={entry.data.summary}>
   <div class="nudger">&nbsp;</div>
   <article data-overlay-color={entry.data.overlayColor}>
     <h1>{entry.data.title}</h1>
